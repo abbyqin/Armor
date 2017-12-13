@@ -1,0 +1,14 @@
+.homeTxt{
+	height: 360px;
+	margin-left: -50%; 
+	margin-top: -180px;
+}
+.headerImg {
+	height: 116px;
+	margin-top: -58px;
+	margin-left: -215px;
+}
+.navbar-brand {
+    width: 200px;
+    display: block;
+}
