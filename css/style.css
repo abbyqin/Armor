@@ -1,15 +1,23 @@
 *{
-	font-family: "微软雅黑";
+	font-family: "微软雅黑" !important;
 	padding: 0;
 	margin: 0;
 	font-size:1em;
 }
+html{height: 100%;}
 .navbar{
 	z-index: 1;
 }
 .navbar-theme {
 	background-color: transparent;
-	border-color: transparent;
+	border: 0;
+}
+.nav-fixed {
+	background-color: #001033;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0
 }
 .navbar-theme .navbar-nav>li>a {
 	color: #ffffff
@@ -34,18 +42,18 @@
 }
 .description{
 	background-image: url("../img/description/about.jpg");
-	    background-repeat: no-repeat;
-    background-position: center center;
+	background-repeat: no-repeat;
+	background-position: center top;
 }
 .solutions{
 	background-image: url("../img/solutions/bg.png");
-	    background-repeat: no-repeat;
-    background-position: center center;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .about{
 	background-image: url("../img/about/bg.png");
-	    background-repeat: no-repeat;
-    background-position: center center;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .homeBody {
 	background-image: url(../img/home.jpg);
@@ -53,6 +61,14 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
+	height: 100%;
+}
+.swiper-container {
+	height: 100%;
+}
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: #fff;
 }
 .downloadBody{
 	background-image: url(../img/download/bg.jpg);
@@ -61,6 +77,7 @@
 	background-attachment: fixed;
 	background-position: center center;
 	height: 100%;
+	overflow-y: hidden;
 }
 .headerImg {
 	max-width: 100%;
@@ -88,7 +105,7 @@
 	content: "";
 	display:block;
 	width: 38%;
-	background-image: url(../img/about/spe.png);
+	background-image: url(../img/description/spe.png);
 	background-repeat: repeat-x;
 	height: 10px;
 	position: absolute;
@@ -100,7 +117,7 @@
 	content: "";
 	display:block;
 	width: 38%;
-	background-image: url(../img/about/spe.png);
+	background-image: url(../img/description/spe.png);
 	background-repeat: repeat-x;
 	height: 10px;
 	position: absolute;
@@ -109,34 +126,33 @@
 	margin-top: -5px;
 }
 .tEng {
-	font-weight: bold;
-	font-size: 16px;
-	margin-top: 10px;
+	font-family: "arive" !important;
+	letter-spacing: 2px;
 }
 .textLine {
 	background-color: #ff0000;
-	width: 30px;
+	width: 50px;
 	height: 5px;
 	margin: 10px auto;
 	border-radius: 3px;
 }
 .t1 {
-	font-size: 36px;
+	font-size: 26px;
 }
 .t2 {
-	font-size: 24px;
-	font-weight: bold;
-	margin: 10px auto;
+	font-size: 22px;
+	/*margin: 10px auto;*/
 }
 .t3 {
-	font-size: 18px;
-	/*margin-bottom: 10px;*/
-	    line-height: 30px;
-	        height: 60px;
+	font-size: 16px;
+}
+.t3-height{
+	/*height: 60px;*/
 }
 .card {
 	overflow: hidden;
 	height: 460px;
+	margin-bottom: 30px;
 }
 .inftxt {
 	margin-top: 5px;
@@ -154,8 +170,8 @@
 .conTxt {
 	line-height: 40px;
 	font-size: 18px;
-	    margin-top: 10px;
-	    white-space: nowrap;
+	margin-top: 10px;
+	white-space: nowrap;
 }
 .mt{
 	margin-top: 10px;
@@ -176,7 +192,7 @@
 	margin-top: 20px;
 }
 .mt50{
-	margin-top: 50px !important;
+	margin-top: 45px !important;
 }
 .mb30{
 	margin-bottom: 30px;
@@ -189,10 +205,10 @@
 	overflow: hidden;
 }
 .scene {
-	background-image: url(../img/about/bg.jpg);
+	background-image: url(../img/description/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	padding: 80px 0;
+	/*padding: 80px 0;*/
 }
 .imgRgt{
 	text-align: right;
@@ -229,43 +245,43 @@
 }
 .bigTxt:before{
 	content: "";
-    position: absolute;
-    width: 6%;
-    height: 2px;
-    background-color: #ff0000;
-    left: 50%;
-    margin-left: -3%;
-    border-radius: 2px;
-    top: -10px;
+	position: absolute;
+	width: 6%;
+	height: 2px;
+	background-color: #ff0000;
+	left: 50%;
+	margin-left: -3%;
+	border-radius: 2px;
+	top: -10px;
 }
 .red {
 	color: #ff0000;
 }
 .dash {
 	position: relative;
-	width: 100px;
+	width: 130px;
 	text-align: center;
 	margin: 0 auto;
 }
 .dash:before {
 	content: "";
 	display: block;
-	width: 50px;
+	width: 80px;
 	height: 1px;
 	background-color: #000;
 	position: absolute;
 	top: 50%;
-	left: -50px;
+	left: -80px;
 }
 .dash:after {
 	content: "";
 	display:block;
-	width: 50px;
+	width: 80px;
 	height: 1px;
 	background-color: #000;
 	position: absolute;
 	top: 50%;
-	right: -50px;
+	right: -80px;
 }
 .center{
 	text-align: center;
@@ -418,6 +434,29 @@ img{
 	top: 50%;
 	margin-top: -9px;
 }
+.angle-bottom {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-top: 20px solid #ddd;
+	border-right: 15px solid transparent;
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -10px;
+	display: none;
+}
+.angle-small-bottom {
+	content: "";
+	position: absolute;
+	bottom: -19px;
+	border-left: 15px solid transparent;
+	border-top: 20px solid #fff;
+	border-right: 15px solid transparent;
+	left: 50%;
+	margin-left: -10px;
+	display: none;
+}
 .m-radio-right {
 	position: absolute;
 	right: -15px;
@@ -471,59 +510,144 @@ img{
 }
 
 .fixed {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
 }
 .height100{
 	height: 100%;
 }
 .fix-img {
-    bottom: 0;
-    position: absolute;
-        width: 70%;
+	bottom: 0;
+	/*position: absolute;*/
+	width: 70%;
 }
 .d-left {
-       color: #fff;
-    position: absolute;
-    width: 70%;
-    bottom: 125px;
+	color: #fff;
+	width: 100%;
+	bottom: 125px;
+	margin: 0 auto;
+	max-width: 200px;
+	overflow: hidden;
 }
-.ecode {
-    background-color: #fff;
-    padding: 10px;
-        width: 100%;
-    overflow: hidden;
+.ecodeImg {
+	margin: 10px auto 0 auto;
+}
+.ecodeImg img {
+	width: 100%;
+}
+.btn-transparent {
+	border: 1px solid #525252;
+	display: block;
+	width: 120px;
+	margin: 10px auto 0 auto;
+	color: #fff;
+}
+.iphone,.android{
+	position: relative;
+	padding-left: 25px;
+}
+.iphone:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/download/ios.png);
+	background-size: 100%;
+	position: absolute;
+	top: 5px;    
+	left: 5px;
+}
+.android:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/download/android.png);
+	background-size: 100%;
+	position: absolute;
+	top: 5px;    
+	left: 5px;
 }
 .btn-red{
-	    background-color: #eb0e0e;
-    color: #fff;
-    border-color: transparent;
-    background: -webkit-linear-gradient(90deg, #fc354d, #eb0e0e);
-    background: -o-linear-gradient(90deg, #fc354d, #eb0e0e);
-    background: -moz-linear-gradient(90deg, #fc354d, #eb0e0e);
-    background: linear-gradient(90deg, #fc354d, #eb0e0e);
+	background-color: #eb0e0e;
+	color: #fff;
+	border-color: transparent;
+	background: -webkit-linear-gradient(90deg, #fc354d, #eb0e0e);
+	background: -o-linear-gradient(90deg, #fc354d, #eb0e0e);
+	background: -moz-linear-gradient(90deg, #fc354d, #eb0e0e);
+	background: linear-gradient(90deg, #fc354d, #eb0e0e);
 }
 .btn-radius {
-    border-radius: 30px;
-    width: 120px;
-        padding: 10px 0;
+	border-radius: 30px;
+	width: 120px;
+	padding: 10px 0;
 }
 .text-decoration{
 	position: relative;
 }
 .text-decoration:before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #ff0000;
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #ff0000;
+}
+.w-login{
+	float: right;
+}
+.in-show{
+	float: left;
+}
+.btn-div{
+	overflow: hidden;
+}
+.img-p50 img{
+	width: 50%
+}
+.color-white{
+	color: #fff;
+}
+.car-item {
+
+	margin-top: 50px;
+}
+.ctt-s1 {
+	background-image: url(../img/solutions/01.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 70px;
+}
+.ctt-s2 {
+	background-image: url(../img/solutions/02.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 70px;
+}
+.con02{
+	background-image: url(../img/solutions/02bg.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.ctt-s3 {
+	background-image: url(../img/solutions/03.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 70px;
+}
+.dl-phone {
+	width: 75%;
+	margin: 0 auto;
+}
+.ecodeImg img{
+	max-width: 300px;
 }
 @media screen and (max-width: 767px) {
+	.navbar-collapse {
+		background-color: #001033;	 
+	}
 	.spe:before,.spe:after{
 		width: 19%;
 	}
@@ -539,16 +663,30 @@ img{
 	.xs-left{
 		left: 0;
 		top: 0;
+		padding-left: 0;
 	}
 	.xs-right{
 		right: 0;
 		top:0;
+		padding-right: 0;
 	}
-	.xs-left .t3,.xs-right .t3{
+	.xs-left .car-text,.xs-right .car-text{
 		color: #ffffff;
 		font-size: 12px
 	}
-	
+	.car-item-wrap{
+		height: 25%;
+		width: 100%;
+		position: relative;
+	}
+	.car-item {
+		position: absolute;
+		bottom: 10px;
+		margin-top: 0;
+	}
+	.xs-left .car-item{
+		right: 0;
+	}
 	.logo{
 		width: 200px
 	}
@@ -558,9 +696,61 @@ img{
 	.company-list li {
 		width: 100%;
 		float: left;
+		text-align: center;
+	}
+	.w-login,.in-show{
+		float: none;
+		clear: none;
+	}
+	.in-show{
+		margin-top: 20px
+	}
+	.header {
+		height: 300px;
+		position: relative;
+	}
+	.t3-height{
+		height: auto;
+	}
+	.dl-phone {    		
+		position: fixed;
+		bottom: 0;
+		left: 50%;
+		/*margin-left: -35%;*/
+		max-height: 48%;
+		max-width: 360px;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);    
+	}
+	/* .dl-phone img{
+		width: inherit;
+	} */
+	.ecodeImg {
+		width: 70%;
+		margin-left: 15%;
+	}
+	.angle-left,.angle-small-left,.angle-right,.angle-small-right{
+		display: none;
+	}
+	.buble-left {
+		margin-right: 0;
+	}
+	.buble-right {
+		margin-left: 0;
+	}
+	.angle-bottom,.angle-small-bottom{
+		display: block;
+	}
+	.border-lf{
+		border:none;
 	}
 }
-
+@media screen and (width: 320px){
+	.dl-phone{
+		width: 65%;
+	}	
+}
 @media screen and (min-width: 768px) {
 	.mt50 {
 		margin-top: 30px;
@@ -569,6 +759,15 @@ img{
 		width: 50%;
 		float: left;
 	}
+	.dl-phone {
+		position: fixed;
+		bottom: 0;
+		left: 50%;
+		max-width: 380px;
+	}
+	.d-left {
+		margin-top: 20%;
+	}
 }
 
 @media screen and (min-width: 992px) {
@@ -576,5 +775,5 @@ img{
 		width: 33.33%;
 		float: left;
 	}
-
+	
 }
