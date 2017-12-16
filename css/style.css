@@ -353,12 +353,12 @@ img{
 	background-attachment: fixed;
 	background-position: left center;
 }
-.buble {
-	max-width: 450px;
+.buble {	
 	padding: 15px 15%;
 	border: 1px solid #ddd;
 	position: relative;
 	    background-color: rgba(255, 255, 255, 0);
+
 }
 .radio{
 	position: relative;
@@ -746,10 +746,13 @@ img{
 		display: none;
 	}
 	.buble-left {
-		margin-right: 0;
+		margin-right: 0;		
 	}
 	.buble-right {
 		margin-left: 0;
+	}
+	.buble{
+		width: 100%;
 	}
 	.angle-bottom,.angle-small-bottom{
 		display: block;
