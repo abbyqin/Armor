@@ -119,7 +119,7 @@
 		</div>	
 		<div class="dash t2 mt50">适应业态</div>	
 		
-		<div class="container">
+		<div class="container center">
 			<img src="img/solutions/adapt.png" alt="适应业态">
 		</div>
 	</div>
@@ -233,7 +233,7 @@
 				</div>
 			</div>
 		</div>		
-		<div class="container mt50">
+		<div class="sol-bottom container mt50">
 			<img src="img/solutions/con03.png" alt="保险行业车辆运营UBI解决方案">
 		</div>		
 	</div>
@@ -242,5 +242,24 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
+	<script>
+		$(function(){
+			var wh = $(window).width();
+			if(wh<768){
+				$(".sol-bottom img").attr("src","img/solutions/con03-m.png")
+			}else{
+				$(".sol-bottom img").attr("src","img/solutions/con03.png")
+			}		
+		})
+
+		$(window).resize(function(){		
+			var wh = $(window).width();	
+			if(wh<768){
+				$(".sol-bottom img").attr("src","img/solutions/con03-m.png")
+			}else{
+				$(".sol-bottom img").attr("src","img/solutions/con03.png")
+			}		
+		})		
+	</script>
 </body>
 </html>
