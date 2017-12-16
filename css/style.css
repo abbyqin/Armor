@@ -44,16 +44,19 @@ html{height: 100%;}
 	background-image: url("../img/description/about.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: cover;
 }
 .solutions{
 	background-image: url("../img/solutions/bg.png");
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: cover;
 }
 .about{
 	background-image: url("../img/about/bg.png");
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: cover;
 }
 .homeBody {
 	background-image: url(../img/home.jpg);
@@ -77,7 +80,7 @@ html{height: 100%;}
 	background-attachment: fixed;
 	background-position: center center;
 	height: 100%;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 }
 .headerImg {
 	max-width: 100%;
@@ -101,7 +104,7 @@ html{height: 100%;}
 	position: relative;
 	width: 100%;
 }
-.spe:before {
+/* .spe:before {
 	content: "";
 	display:block;
 	width: 38%;
@@ -124,7 +127,7 @@ html{height: 100%;}
 	top: 50%;
 	right: 0;
 	margin-top: -5px;
-}
+} */
 .tEng {
 	font-family: "arive" !important;
 	letter-spacing: 2px;
@@ -132,7 +135,7 @@ html{height: 100%;}
 .textLine {
 	background-color: #ff0000;
 	width: 50px;
-	height: 5px;
+	height: 3px;
 	margin: 10px auto;
 	border-radius: 3px;
 }
@@ -306,12 +309,19 @@ img{
 	color: #ff0000;
 	position: absolute;
 	left: 0;
+	font-size: xx-small;
 }
 .con02-sol{
 	height: 200px;
 }
 .nogutter,.nogutter [class ^="col-"]{
 	padding: 0;
+}
+.noMargin{
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 .border-card {
 	border: 1px solid #dddddd;
@@ -325,6 +335,7 @@ img{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
+	padding-bottom: 50px;
 }
 .about02{
 	background-image: url("../img/about/about02-bg.png");
@@ -333,20 +344,21 @@ img{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
+	padding-bottom: 50px;
 }
 .about04{
 	background-image: url("../img/about/about04-bg.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center center;
+	background-position: left center;
 }
 .buble {
 	max-width: 450px;
 	padding: 15px 15%;
 	border: 1px solid #ddd;
 	position: relative;
-	background-color: #fff;
+	    background-color: rgba(255, 255, 255, 0);
 }
 .radio{
 	position: relative;
@@ -637,13 +649,18 @@ img{
 	background-position: center top;
 	padding-top: 70px;
 }
-.dl-phone {
-	width: 75%;
-	margin: 0 auto;
-}
 .ecodeImg img{
 	max-width: 300px;
 }
+.w-icon {
+	width: 36px;
+}
+
+.phone-div {
+	position: relative;
+}
+
+
 @media screen and (max-width: 767px) {
 	.navbar-collapse {
 		background-color: #001033;	 
@@ -712,20 +729,15 @@ img{
 	.t3-height{
 		height: auto;
 	}
-	.dl-phone {    		
-		position: fixed;
-		bottom: 0;
-		left: 50%;
-		/*margin-left: -35%;*/
-		max-height: 48%;
-		max-width: 360px;
-		-webkit-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		transform: translateX(-50%);    
+
+	.dl-phone {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
 	}
-	/* .dl-phone img{
-		width: inherit;
-	} */
+	.dl-phone img {
+		height: 100%;
+	}
 	.ecodeImg {
 		width: 70%;
 		margin-left: 15%;
@@ -745,11 +757,28 @@ img{
 	.border-lf{
 		border:none;
 	}
+	.buble {
+    margin-bottom: 10px;
 }
+	@media screen and (orientation: landscape) {
+		/*横屏 css*/
+		.phone-div{
+			height: auto !important;
+		}
+		.dl-phone {
+			height: 100%;
+			width: 80%;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+	}
+}
+@media screen and (orientation: portrait) {
+	/*竖屏 css*/
+} 
+
 @media screen and (width: 320px){
-	.dl-phone{
-		width: 65%;
-	}	
+
 }
 @media screen and (min-width: 768px) {
 	.mt50 {
@@ -760,13 +789,22 @@ img{
 		float: left;
 	}
 	.dl-phone {
-		position: fixed;
+		position: absolute;
 		bottom: 0;
-		left: 50%;
-		max-width: 380px;
+		width: 80%;
+		left: 10%;
 	}
 	.d-left {
-		margin-top: 20%;
+		height: 330px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+	}
+	.phone-div {
+		height: 100%;
 	}
 }
 
@@ -775,5 +813,5 @@ img{
 		width: 33.33%;
 		float: left;
 	}
-	
+
 }
