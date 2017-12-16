@@ -662,6 +662,9 @@ img{
 
 
 @media screen and (max-width: 767px) {
+	.about01,.about02,.about04{
+	background-position: left center;
+}
 	.navbar-collapse {
 		background-color: #001033;	 
 	}
