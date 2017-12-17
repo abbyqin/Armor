@@ -9,6 +9,10 @@
 	margin-left: -215px;
 }
 .navbar-brand {
-    width: 200px;
-    display: block;
+	width: 200px;
+	display: block;
 }
+.d-left{
+	margin-top: -150px;
+}
+
