@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>首页</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!--[if lte IE 8]> <link href="css/ie.css" rel="stylesheet"> <![endif]-->
+</head>
+<body class="downloadBody">
+	<nav class="navbar navbar-theme">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="img/logo.png" alt="网站logo" class="logo">
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-center">
+					<li><a href="index.html">网站首页</a></li>
+					<li><a href="description.html">产品介绍</a></li>
+					<li><a href="solution.html">解决方案</a></li>
+					<li class="active"><a href="download.html">应用下载</a></li>
+					<li><a href="about.html">关于盔甲</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>	
+	<div class="container">
+		<div class="row dnld-height">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-ecode">	
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="d-left">
+						<div class="t1">智慧车队管理端v2.3</div>
+						<div class="t3">我  使  客  户  更  强  大  ！</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="col-xs-6 col-sm-6 col-md-6 ecode-div">
+						<img src="img/download/ecode.jpg" alt="二维码">
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 nogutter">
+						<a  href="#" class="btn-transparent iphone">iPhonen版</a>
+						<a  href="" class="btn-transparent android">Android版</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 phone-div">
+				<div class="dl-phone center">
+					<img src="img/download/ph.png" alt="手机">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>		
+				
+		$(document).ready(function(){
+			setHeight();
+		})
+
+		$(window).resize(function(){		
+			setHeight();
+		})
+
+		function setHeight(){
+			var navHeight = $(".navbar").height();
+			var wh = $(window).width(),
+				conHeight = $(window).height()-navHeight-20;
+			//计算手机显示的高度
+			if(wh<768){
+				$(".phone-div").height(conHeight-$(".col-ecode").height()-20);
+			}else{
+				$(".phone-div").height(conHeight);
+				$(".col-ecode").css({
+					"margin-top": (conHeight-$(".col-ecode").height())/2
+				});
+			}
+
+			var ecodeImgHeight = $(".ecode-div").height();
+			var btnHeight = (ecodeImgHeight-14)/2;
+			$(".btn-transparent").css({
+				"height": btnHeight+"px",
+				"line-height":btnHeight+"px"
+			});
+		}
+	</script>
+</body>
+</html>
