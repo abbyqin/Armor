@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,user-scalable=0;">
 	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>首页</title>
+	<title>应用下载</title>
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -78,19 +78,33 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
 	<script>		
-				
-		$(document).ready(function(){
-			setHeight();
+
+		$(function(){
+			getContainHeight();	//获取内容高度			
 		})
+		window.onload = function(){
+			setHeight();	//设置按钮高度
+		}
 
 		$(window).resize(function(){		
-			setHeight();
+			getContainHeight();	//获取内容高度			
+			setHeight();	//设置按钮高度			
 		})
 
 		function setHeight(){
+			var ecodeImgHeight = $(".ecode-div").height();
+			var btnHeight = (ecodeImgHeight-14)/2;
+			$(".btn-transparent").css({
+				"height": btnHeight+"px",
+				"line-height":btnHeight+"px"
+			});
+
+		}
+
+		function getContainHeight(){
 			var navHeight = $(".navbar").height();
 			var wh = $(window).width(),
-				conHeight = $(window).height()-navHeight-20;
+			conHeight = $(window).height()-navHeight-20;
 			//计算手机显示的高度
 			if(wh<768){
 				$(".phone-div").height(conHeight-$(".col-ecode").height()-20);
@@ -100,13 +114,6 @@
 					"margin-top": (conHeight-$(".col-ecode").height())/2
 				});
 			}
-
-			var ecodeImgHeight = $(".ecode-div").height();
-			var btnHeight = (ecodeImgHeight-14)/2;
-			$(".btn-transparent").css({
-				"height": btnHeight+"px",
-				"line-height":btnHeight+"px"
-			});
 		}
 	</script>
 </body>
