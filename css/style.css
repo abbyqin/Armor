@@ -1082,8 +1082,8 @@ html {
 }
 
 @media screen and (min-width:1200px) {
-	.container {
-		/*width: 60%;*/
+	.dldContainer {
+		width: 60%;
 		max-width: 1170px;
 	}
 	.iphone:before,.android:before {
