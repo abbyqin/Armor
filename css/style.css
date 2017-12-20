@@ -460,26 +460,26 @@ html {
 		border-radius: 10px;
 	}
 
-	.radio-border:before {
+	 .radio-border:before {
 		content: "";
 		display: block;
 		width: 2px;
-		height: 100px;
+		height: 50px;
 		background-color: #666666;
 		position: absolute;
-		bottom: 100%;
+		bottom: 28px;
 		left: 50%;
 		margin-left: -1px;
-	}
+	} 
 
 	.radio-border:after {
 		content: "";
 		display: block;
 		width: 2px;
-		height: 100px;
+		height:90px;
 		background-color: #666666;
 		position: absolute;
-		top: 100%;
+		top: 28px;
 		left: 50%;
 		margin-left: -1px;
 	}
