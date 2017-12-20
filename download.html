@@ -89,14 +89,15 @@
 		function setHeight(){
 			var navHeight = $(".navbar").height();
 			var wh = $(window).width(),
-			conHeight = $(window).height()-navHeight-20;
+				conHeight = $(window).height()-navHeight-20;
 			//计算手机显示的高度
 			if(wh<768){
 				$(".phone-div").height(conHeight-$(".col-ecode").height()-20);
 			}else{
 				$(".phone-div").height(conHeight);
+				var phone_div = $(".dl-phone").height();
 				$(".col-ecode").css({
-					"margin-top": (conHeight-$(".col-ecode").height())/2
+					"margin-top": conHeight-phone_div+30
 				});
 			}
 
@@ -106,7 +107,6 @@
 				"height": btnHeight+"px",
 				"line-height":btnHeight+"px"
 			});
-
 		}
 	
 	</script>
