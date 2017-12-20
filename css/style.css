@@ -5,9 +5,9 @@
 	font-size: 1em;
 }
 a:focus, a:hover {
-    color: #fff;
-    text-decoration: underline;
-    text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
+	text-decoration: none;
 }
 html {
 	height: 100%;
@@ -177,7 +177,7 @@ html {
 	}
 
 	.t3-height {
-		/*height: 60px;*/
+		text-align: center;
 	}
 
 	.card {
@@ -460,7 +460,7 @@ html {
 		border-radius: 10px;
 	}
 
-	 .radio-border:before {
+	.radio-border:before {
 		content: "";
 		display: block;
 		width: 2px;
@@ -638,9 +638,9 @@ html {
 		color: #fff;
 		width: 100%;
 		margin-bottom: 20px;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		position: relative;
-		padding-top: 20px;
+		/*padding-top: 20px;*/
 	}
 	.d-left:before {
 		content: "";
@@ -649,8 +649,8 @@ html {
 		height: 1px;
 		width: 80px;
 		background-color: #eb0e0e;
-		left: 15px;
-		top: 0;
+		left: 0;
+		top: -20px;
 	}
 	.col-ecode {
 		margin-bottom: 20px;
@@ -660,13 +660,12 @@ html {
 		display: block;
 		width: 100%;
 		color: #fff;
-		border-radius: 0;
-		text-align: center;
+		border-radius: 0;		
 	}
 
 	.iphone, .android {
 		position: relative;
-		padding-left: 25px;
+		padding-left: 60px;
 	}
 
 	.iphone {
@@ -675,7 +674,7 @@ html {
 
 	.android {
 		border: 1px solid #97c03d;
-		margin-top: 10px;
+		margin-top: 30px;
 	}
 
 	.iphone:before {
@@ -686,7 +685,7 @@ html {
 		background-size: 100%;
 		position: absolute;
 		top: 50%;
-		left: 0;
+		left: 15px;
 		margin-top: -15px;
 		background-repeat: no-repeat;
 	}
@@ -699,7 +698,7 @@ html {
 		background-size: 100%;
 		position: absolute;
 		top: 50%;
-		left: 0;
+		left: 15px;
 		margin-top: -15px;
 	}
 
@@ -815,10 +814,6 @@ html {
 		text-align: center;
 		margin: 10px 0;
 	}
-
-	.d-left div {
-		padding: 0 15px;
-	}
 	.sol-wrap {
 		border: 1px solid #ddd;
 		padding: 15px;
@@ -839,11 +834,23 @@ html {
 	}
 	.sw-txt {
 		margin-top: 10px;
+		text-align: center;
 	}
 	.sol-bottom {
 		margin: 0 auto;
 		text-align: center;
 		padding: 30px 0;
+	}
+	.dnld_txt {
+		font-size: 3em;
+		
+	}
+	.dnld_t2 {
+		font-size: 24px;
+		margin: 10px 0;
+	}
+	.ecode_wrap{
+		padding: 0;
 	}
 	@media screen and (max-width:767px) {
 		.bigTxt {
@@ -990,56 +997,63 @@ html {
 
 		.t1 {
 			font-size: 25px;
+		}		
+		.swiper-button-prev,.swiper-button-next{
+			display: none;
 		}
-		.t3-height {
-		    text-align: center;
-	}
-		@media screen and (orientation:landscape) {
+		/* .android {
+			margin-top:20px;
+			} */
 
-			/*横屏 css*/
-			.phone-div {
-				height: auto !important;
+			.dnld_txt {
+				font-size: 2em;
+				text-align: center;
+			}
+			.dnld_t2 {
+				font-size: 18px;
+				text-align: center;
+			}
+			@media screen and (orientation:landscape) {
+
+				/*横屏 css*/
+				.phone-div {
+					height: auto !important;
+				}
+
+				.dl-phone {
+					height: 100%;
+					width: 80%;
+					overflow: hidden;
+					margin: 0 auto;
+				}
+
+			}
+
+		}
+
+		@media screen and (min-width:415px) and (max-width:767px){
+			.col-ecode {
+				width: 350px;
+				margin: 0 auto;
+				position: relative;
+				left: 50%;
+				margin-left: -175px;
+				margin-bottom: 20px;
+			}		
+		}
+		@media screen and (min-width:768px) {
+			.mt50 {
+				margin-top: 30px;
+			}
+
+			.company-list li {
+				width: 50%;
+				float: left;
 			}
 
 			.dl-phone {
-				height: 100%;
-				width: 80%;
-				overflow: hidden;
-				margin: 0 auto;
-			}
-
-		}
-
-	}
-
-	@media screen and (min-width:415px) and (max-width:767px){
-		.col-ecode {
-			width: 350px;
-			margin: 0 auto;
-			position: relative;
-			left: 50%;
-			margin-left: -175px;
-			margin-bottom: 20px;
-		}
-	}
-	@media screen and (orientation:portrait) {
-
-		/*竖屏 css*/
-	}
-
-	@media screen and (min-width:768px) {
-		.mt50 {
-			margin-top: 30px;
-		}
-
-		.company-list li {
-			width: 50%;
-			float: left;
-		}
-
-		.dl-phone {
-			position: absolute;
-			bottom: 0;
+				position: absolute;
+				bottom: 0;
 		/* width: 80%;
 		left: 10%; */
 	}
@@ -1054,17 +1068,12 @@ html {
 
 	.downloadBody {
 		overflow-y: hidden;
+	}	
+	.iphone, .android {
+		font-size:1.3em;
 	}
-
 }
 
-@media screen and (min-width:992px) {
-	.company-list li {
-		width: 33.33%;
-		float: left;
-	}
-
-}
 
 @media screen and (min-width:992px) {
 	.company-list li {
@@ -1077,34 +1086,44 @@ html {
 		margin: 0 auto;
 		float: none;
 	}
-
-}
-
-@media screen and (min-width:1200px) {
-	.dldContainer {
-		width: 60%;
-		max-width: 1170px;
-	}
-	.iphone:before,.android:before {
+	/* .iphone:before,.android:before {
 		content: "";
-		width: 50px;
-		height: 50px;
-		margin-top: -25px;
+		width: 40px;
+		height: 40px;
+		margin-top: -20px;
 	}	
 	.iphone, .android {
-		font-size:22px;
+		font-size:20px;
 		padding-left: 50px
+		} */
+
+
 	}
-}
-@media screen and (min-width:1440px) {
-	.iphone:before,.android:before {
-		content: "";
-		width: 2.6em;
-		height: 2.6em;    
-		margin-top: -1.3em;	   
-	}	
-	.iphone, .android {
-		font-size: 2em;
-		padding-left: 2.6em;
+
+	@media screen and (min-width:1200px) {
+		.dldContainer {
+			width: 60%;
+			max-width: 1170px;
+		}
+
 	}
-}
+	@media screen and (min-width:1440px) {
+		.iphone:before,.android:before {
+			content: "";
+			width: 2em;
+			height: 2em;    
+			left: 20px;
+			margin-top: -1em;	   
+		}	
+		.iphone, .android {
+			font-size: 2em;
+			padding-left: 4em;
+		}
+		.dnld_txt {
+			font-size: 4em;
+		}
+		.dnld_t2 {
+			font-size: 2em;
+			margin: 1em 0 2em 0;
+		}
+	} 
