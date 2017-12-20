@@ -1000,104 +1000,85 @@ html {
 		}		
 		.swiper-button-prev,.swiper-button-next{
 			display: none;
+		}		
+
+		.dnld_txt {
+			font-size: 2em;
+			text-align: center;
 		}
-		/* .android {
-			margin-top:20px;
-			} */
-
-			.dnld_txt {
-				font-size: 2em;
-				text-align: center;
-			}
-			.dnld_t2 {
-				font-size: 18px;
-				text-align: center;
-			}
-			@media screen and (orientation:landscape) {
-
-				/*横屏 css*/
-				.phone-div {
-					height: auto !important;
-				}
-
-				.dl-phone {
-					height: 100%;
-					width: 80%;
-					overflow: hidden;
-					margin: 0 auto;
-				}
-
-			}
-
+		.dnld_t2 {
+			font-size: 18px;
+			text-align: center;
 		}
-
-		@media screen and (min-width:415px) and (max-width:767px){
-			.col-ecode {
-				width: 350px;
-				margin: 0 auto;
-				position: relative;
-				left: 50%;
-				margin-left: -175px;
-				margin-bottom: 20px;
-			}		
-		}
-		@media screen and (min-width:768px) {
-			.mt50 {
-				margin-top: 30px;
-			}
-
-			.company-list li {
-				width: 50%;
-				float: left;
+		@media screen and (orientation:landscape) {
+			.phone-div {
+				height: auto !important;
 			}
 
 			.dl-phone {
-				position: absolute;
-				bottom: 0;
-		/* width: 80%;
-		left: 10%; */
+				height: 100%;
+				width: 80%;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+
+		}
+
 	}
 
-	.phone-div {
-		height: 100%;
+	@media screen and (min-width:415px) and (max-width:767px){
+		.col-ecode {
+			width: 350px;
+			margin: 0 auto;
+			position: relative;
+			left: 50%;
+			margin-left: -175px;
+			margin-bottom: 20px;
+		}		
+	}
+	@media screen and (min-width:768px) {
+		.mt50 {
+			margin-top: 30px;
+		}
+
+		.company-list li {
+			width: 50%;
+			float: left;
+		}
+
+		.dl-phone {
+			position: absolute;
+			bottom: 0;
+		}
+
+		.phone-div {
+			height: 100%;
+		}
+
+		.dnld-height {
+			overflow: hidden;
+		}
+
+		.downloadBody {
+			overflow-y: hidden;
+		}	
+		.iphone, .android {
+			font-size:1.3em;
+		}
 	}
 
-	.dnld-height {
-		overflow: hidden;
-	}
 
-	.downloadBody {
-		overflow-y: hidden;
-	}	
-	.iphone, .android {
-		font-size:1.3em;
-	}
-}
+	@media screen and (min-width:992px) {
+		.company-list li {
+			width: 33.33%;
+			float: left;
+		}
 
-
-@media screen and (min-width:992px) {
-	.company-list li {
-		width: 33.33%;
-		float: left;
-	}
-
-	.navbar-center {
-		width: 430px;
-		margin: 0 auto;
-		float: none;
-	}
-	/* .iphone:before,.android:before {
-		content: "";
-		width: 40px;
-		height: 40px;
-		margin-top: -20px;
-	}	
-	.iphone, .android {
-		font-size:20px;
-		padding-left: 50px
-		} */
-
-
+		.navbar-center {
+			width: 430px;
+			margin: 0 auto;
+			float: none;
+		}	
 	}
 
 	@media screen and (min-width:1200px) {
@@ -1112,7 +1093,7 @@ html {
 			content: "";
 			width: 2em;
 			height: 2em;    
-			left: 20px;
+			left: 1em;
 			margin-top: -1em;	   
 		}	
 		.iphone, .android {
