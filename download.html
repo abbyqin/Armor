@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,user-scalable=0;">
 	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 	<title>应用下载</title>
-
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
@@ -30,7 +29,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#">
-					<img src="img/logo.png" alt="网站logo" class="logo">
+					<div class="icon-bg logo"></div>
 				</a>
 			</div>
 
@@ -82,27 +81,14 @@
 			setHeight();	//设置高度
 		}
 
-		/*$(window).resize(function(){
+		$(window).resize(function(){
 			setHeight();	//设置高度			
-		})*/
+		})
 
 		function setHeight(){
 			var navHeight = $(".navbar").height();
 			var wh = $(window).width(),
-				conHeight = $(window).height()-navHeight-20;
-			//计算手机显示的高度
-			if(wh<768){
-				$(".phone-div").height(conHeight-$(".col-ecode").height()-20);
-				$(".col-ecode").css({
-					"margin-top": 0
-				});
-			}else{
-				$(".phone-div").height(conHeight);
-				var phone_div = $(".dl-phone").height();
-				$(".col-ecode").css({
-					"margin-top": conHeight-phone_div
-				});
-			}
+			conHeight = $(window).height()-navHeight-20;
 
 			var ecodeImgHeight = $(".ecode-div").height();
 			var btnHeight = (ecodeImgHeight-$(".android").css("margin-top").replace('px', ''))/2;
@@ -110,8 +96,21 @@
 				"height": btnHeight+"px",
 				"line-height":btnHeight+"px"
 			});
-		}
-	
-	</script>
+
+			//计算手机显示的高度
+			if(wh<768){
+				$(".phone-div").height(conHeight-$(".col-ecode").height()-20);
+				$(".col-ecode").css({
+					"margin-top": 0
+				});
+			}else{
+				$(".phone-div").height(conHeight);				
+				var phone_div = $(".dl-phone").height();
+				$(".col-ecode").css({
+					"margin-top": conHeight-phone_div + "px"
+				});
+			}			
+		}	
+	</script>	
 </body>
 </html>

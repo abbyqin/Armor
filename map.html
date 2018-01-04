@@ -28,140 +28,107 @@
  option = null;
  var data = [{
      name: '北京',
-     value: 1982,
-     company: 1
+     value: 2500     
  }, {
      name: '上海',
-     value: 1982,
-     company: 7
+     value: 2500     
  }, {
      name: '江苏',
-     value: 1982,
-     company: 18
+     value: 2500
  }, {
      name: '浙江',
-     value: 1982,
-     company: 2
+     value: 2500
  }, {
      name: '湖北',
-     value: 1982,
-     company: 1
+     value: 2500
  }, {
      name: '陕西',
-     value: 1982,
-     company: 1
+     value: 2500
  }, {
      name: '广东',
-     value: 1982,
-     company: 14
+     value: 2500
  }, {
      name: '天津',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '重庆',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '河北',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '河南',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '云南',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '辽宁',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '黑龙江',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '湖南',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '安徽',
      value: '',
      company: 0
  }, {
      name: '山东',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '新疆',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '江西',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '广西',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '甘肃',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '山西',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '内蒙古',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '吉林',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '福建',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '贵州',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '青海',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '西藏',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '四川',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '宁夏',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '海南',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '台湾',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '香港',
-     value: '',
-     company: 0
+     value: ''
  }, {
      name: '澳门',
-     value: '',
-     company: 0
+     value: ''
  }];
 
  function randomValue() {
@@ -171,7 +138,12 @@
      title: {
          text: '以下数字代表服务的企业数量',
          subtext: '',
-         x: 'center'
+         x: 'center',
+         textStyle:{
+            fontSize: 12,
+            fontWeight: 'normal',
+            color: '#333'
+        }      
      },
      tooltip: {
          show: false
@@ -190,33 +162,9 @@
          text: ['高', '低'], // 文本，默认为数值文本
          calculable: true,
          color: ['#d1ec3a', '#eeeeee'] //设置地图的背景色
-     },
-     geo: {
-      map: 'china',
-      roam: true,
-      label: {
-        normal: {
-          show: true,
-          textStyle: {
-            color: 'rgba(0,0,0,0.4)' //地区文字颜色
-          }
-        }
-      },
-      itemStyle: {
-        normal:{
-          borderColor: 'rgb(154, 154, 154)'//地图边框
-        },
-        emphasis:{
-          areaColor: null,
-          shadowOffsetX: 0,
-          shadowOffsetY: 0,
-          shadowBlur: 20,
-          borderWidth: 0,
-          shadowColor: 'rgba(0, 0, 0, 0.5)'
-        }
-      }
-    },
-     series: [{
+     },     
+     series: [
+     {
          name: 'map',
          type: 'map',
          mapType: 'china',
@@ -230,11 +178,11 @@
          },
          itemStyle: {
              normal: {
-                 borderWidth: 2,
+                 borderWidth: 0.5,
                  borderColor: '#c6c6c6',
                  color: '#c6c6c6',
                  label: {
-                     show: false
+                     show: true
                  }
              },
              emphasis: { // 也是选中样式                   
@@ -244,7 +192,7 @@
                  shadowBlur: 20,
                  borderWidth: 0,
                  shadowColor: 'rgba(0, 0, 0, 0.8)',
-                 color: "#fff020",
+                 color: "#fff47c",
                  label: {
                      show: true,
                      textStyle: {
@@ -265,44 +213,39 @@
              },
              data: [{
                  name: '北京',
-                 value: 999,
-                 company: 1
+                 value: 1
              }, {
                  name: '上海',
-                 value: 7,
-                 company: 7
+                 value: 7
              }, {
                  name: '江苏',
-                 value: 18,
-                 company: 18
+                 value: 18
              }, {
                  name: '浙江',
-                 value: 2,
-                 company: 2
+                 value: 2
              }, {
                  name: '湖北',
-                 value: 1,
-                 company: 1
+                 value: 1
              }, {
                  name: '陕西',
-                 value: 1,
-                 company: 1
+                 value: 1
              }, {
                  name: '广东',
-                 value: 14,
-                 company: 14
+                 value: 14
              }]
          },
          geoCoord: { //标记需自己增加地区的经纬度进行标记定位
              "北京": [116.46, 39.92],
              "上海": [121.48, 31.22],
              "广东": [113.23, 23.16],
-             "江苏": [118.78, 32.04],
+             "江苏": [119.78, 33.04],
              "湖北": [114.31, 30.52],
-             "浙江": [120.16, 30.27],
+             "浙江": [120.16, 29.16],
              "陕西": [108.95, 34.27]
          }
-     }]
+     }
+
+     ]
  };
  if (option && typeof option === "object") {
      myChart.setOption(option, true);
