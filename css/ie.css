@@ -1,18 +1,1 @@
-.homeTxt{
-	height: 360px;
-	margin-left: -50%; 
-	margin-top: -180px;
-}
-.headerImg {
-	height: 116px;
-	margin-top: -58px;
-	margin-left: -215px;
-}
-.navbar-brand {
-	width: 200px;
-	display: block;
-}
-.d-left{
-	margin-top: -150px;
-}
-
+.homeTxt{height:360px;margin-left:-50%;margin-top:-180px}.headerImg{height:116px;margin-top:-58px;margin-left:-215px}.navbar-brand{width:200px;display:block}.d-left{margin-top:-150px}.dldContainer{width:60%!important}.dl-phone{position:absolute;bottom:0;width:100%;left:0}.dl-phone img{width:100%}.col-ecode{padding-top:180px}
